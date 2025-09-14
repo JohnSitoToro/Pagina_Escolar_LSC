@@ -21,6 +21,7 @@ body {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
+    margin-trim: both;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -33,6 +34,13 @@ header {
 header img {
     width: 300px;
     margin-bottom: 15px;
+}
+
+.navegacion {
+    background: #51dee3;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 0;
 }
 
 section {
