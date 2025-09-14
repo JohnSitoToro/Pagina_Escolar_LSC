@@ -6,7 +6,7 @@ body {
 }
 
 .banner {
-    display: block;
+    display: auto;
     width: 100vw;
     max-width: 100%;
     height: auto;
@@ -44,14 +44,12 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Centrar todos los títulos */
 h2 {
     color: #006400;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Sección de textos */
 .seccion-textos {
     display: flex;
     flex-direction: column;
@@ -61,34 +59,20 @@ h2 {
     max-width: 1200px;
 }
 
-.lema-box,
-.mision-box,
-.vision-box {
+.lema-box {
     border: 2px solid black;
     padding: 20px;
     background: #fff;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.lema-box {
     width: 50%;
 }
 
-.mision-vision {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-}
-
-/* Sección Autoridades */
 .autoridades-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* centra horizontal */
     gap: 20px;
 }
 
@@ -112,17 +96,14 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Botón Agendar Cita */
 .agendar-cita {
     text-align: center;
-    /* centra todo dentro de la sección */
 }
 
 .agendar-cita button {
     margin-top: 20px;
 }
 
-/* Botones generales */
 button {
     background: #0033cc;
     color: white;
@@ -138,7 +119,6 @@ button:hover {
     background: #001a66;
 }
 
-/* Botón flotante WhatsApp y correo */
 .boton-flotante {
     position: fixed;
     bottom: 20px;
@@ -164,6 +144,7 @@ button:hover {
     transform: scale(1.1);
 }
 
+
 footer {
     background: #222;
     color: white;
@@ -171,7 +152,6 @@ footer {
     text-align: center;
 }
 
-/* Lightbox */
 .lightbox {
     display: none;
     position: fixed;
@@ -206,7 +186,7 @@ footer {
     cursor: pointer;
 }
 
-/* Carrusel */
+/* Carrusel de fotos */
 .carrusel {
     position: relative;
     max-width: 600px;
@@ -258,4 +238,108 @@ footer {
 .carrusel .prev:hover,
 .carrusel .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Carrusel de textos Misión/Visión */
+.carrusel-textos {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.slides-textos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-texto {
+    min-width: 100%;
+}
+
+.mision-box,
+.vision-box {
+    border: 2px solid black;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrusel-textos .prev-texto,
+.carrusel-textos .next-texto {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carrusel-textos .prev-texto {
+    left: 10px;
+}
+
+.carrusel-textos .next-texto {
+    right: 10px;
+}
+
+.carrusel-textos .prev-texto:hover,
+.carrusel-textos .next-texto:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.uniformes {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.uniformes h2,
+.uniformes h3 {
+    text-align: center;
+    color: #006400;
+    margin-bottom: 15px;
+}
+
+.uniformes-hombre,
+.uniformes-mujer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.uniformes img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.mapa {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.mapa h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #006400;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
 }
