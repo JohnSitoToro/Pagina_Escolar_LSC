@@ -120,7 +120,7 @@ h2 {
     transition: transform 0.3s;
     border-radius: 8px
 }
-a ok ok, entonces yo creo que tenemos un 50% , o si
+
 .galeria img:hover {
     transform: scale(1.05);
 }
@@ -149,7 +149,7 @@ a ok ok, entonces yo creo que tenemos un 50% , o si
 }
 
 .lightbox.activo {
-  display: flex;           /* Se muestra al abrir */
+  display: flex;           
 }
 
 .cerrar {
