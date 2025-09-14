@@ -7,11 +7,11 @@ body {
 
 .banner {
     display: block;
-    width: 100vw;        
+    width: 100vw;
     max-width: 100%;
     height: auto;
-    object-fit: cover;  
-    margin: 0 calc(50% - 50vw); 
+    object-fit: cover;
+    margin: 0 calc(50% - 50vw);
     padding: 0;
 }
 
@@ -44,10 +44,14 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Centrar todos los títulos */
 h2 {
     color: #006400;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+/* Sección de textos */
 .seccion-textos {
     display: flex;
     flex-direction: column;
@@ -57,23 +61,19 @@ h2 {
     max-width: 1200px;
 }
 
-.lema-box, .mision-box, .vision-box {
+.lema-box,
+.mision-box,
+.vision-box {
     border: 2px solid black;
     padding: 20px;
     background: #fff;
     border-radius: 10px;
-    text-align: Center;
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .lema-box {
     width: 50%;
-}
-
-.lema-box h2, .mision-box h2, .vision-box h2 {
-    text-align: center;
-    color: #006400;
-    margin-bottom: 15px;
 }
 
 .mision-vision {
@@ -83,12 +83,21 @@ h2 {
     width: 100%;
 }
 
+/* Sección Autoridades */
+.autoridades-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centra horizontal */
+    gap: 20px;
+}
+
 .autoridades {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .autoridad {
@@ -103,7 +112,17 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* Botón Agendar Cita */
+.agendar-cita {
+    text-align: center;
+    /* centra todo dentro de la sección */
+}
 
+.agendar-cita button {
+    margin-top: 20px;
+}
+
+/* Botones generales */
 button {
     background: #0033cc;
     color: white;
@@ -111,7 +130,6 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 20px;
     font-size: 16px;
     transition: background 0.3s;
 }
@@ -120,6 +138,7 @@ button:hover {
     background: #001a66;
 }
 
+/* Botón flotante WhatsApp y correo */
 .boton-flotante {
     position: fixed;
     bottom: 20px;
@@ -145,7 +164,6 @@ button:hover {
     transform: scale(1.1);
 }
 
-
 footer {
     background: #222;
     color: white;
@@ -153,7 +171,7 @@ footer {
     text-align: center;
 }
 
-
+/* Lightbox */
 .lightbox {
     display: none;
     position: fixed;
@@ -162,7 +180,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
 }
@@ -188,14 +206,14 @@ footer {
     cursor: pointer;
 }
 
-
+/* Carrusel */
 .carrusel {
     position: relative;
     max-width: 600px;
     margin: 40px auto;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .slides {
@@ -219,7 +237,7 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     font-size: 30px;
@@ -239,5 +257,5 @@ footer {
 
 .carrusel .prev:hover,
 .carrusel .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
