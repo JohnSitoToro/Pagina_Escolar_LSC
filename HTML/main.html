@@ -11,9 +11,8 @@
 <body>
 
 <img src="../IMAGENES/Portada.jpeg" class="banner">
- 
 
-      <section class="seccion-textos">
+<section class="seccion-textos">
     <div class="lema-box">
         <h2>Lema</h2>
         <p>Te educamos para que pienses, sientas y construyas tu proyecto de vida.</p>
@@ -21,89 +20,102 @@
     <div class="mision-vision">
         <div class="mision-box">
             <h2>Misión</h2>
-            <p>En las Asociaciones César Conto y Antonio Maceo y Grajales, satisfacemos las necesidades de formación
-                académica, técnica y humana, con calidad, participación, convivencia, inclusión y permanencia,
-                requeridas
-                por la sociedad.
-                Todo ello, mediante el desarrollo y aplicación de procesos educativos integrales e innovadores, que
-                respondan a los lineamientos definidos por el Estado, en un entorno de equilibrio con la comunidad desde
-                el
-                desarrollo de habilidades para el emprendimiento y el cuidado, protección y preservación del medio
-                ambiente
-                que permita mitigar el cambio climático.</p>
+            <p>En las Asociaciones César Conto y Antonio Maceo y Grajales, satisfacemos las necesidades de formación académica, técnica y humana, con calidad, participación, convivencia, inclusión y permanencia, requeridas por la sociedad. Todo ello, mediante el desarrollo y aplicación de procesos educativos integrales e innovadores, que respondan a los lineamientos definidos por el Estado, en un entorno de equilibrio con la comunidad desde el desarrollo de habilidades para el emprendimiento y el cuidado, protección y preservación del medio ambiente que permita mitigar el cambio climático</p>
         </div>
-
         <div class="vision-box">
             <h2>Visión</h2>
-            <p>En el 2029, las Asociaciones César Conto y Antonio Maceo y Grajales serán reconocidas a nivel nacional
-                por el
-                desarrollo sociocultural, la capacidad de emprendimiento y de cuidado ambiental de sus egresados,
-                quienes se
-                apropian de las competencias humanas, académicas, técnicas y sociales, alcanzadas dentro de los procesos
-                de
-                formación, para articularlas a las necesidades de los sectores productivos y educativos de nivel
-                superior.</p>
+            <p>En el 2029, las Asociaciones César Conto y Antonio Maceo y Grajales serán reconocidas a nivel nacional por el desarrollo sociocultural, la capacidad de emprendimiento y de cuidado ambiental de sus egresados, quienes se apropian de las competencias humanas, académicas, técnicas y sociales, alcanzadas dentro de los procesos de formación, para articularlas a las necesidades de los sectores productivos y educativos de nivel superior</p>
         </div>
     </div>
 </section>
-    <section>
-        <h2>Autoridades</h2>
-        <div class="autoridades">
-            <div class="autoridad">
-                <img src="../IMAGENES/Directora.jpeg" alt="Directora">
-                <p><strong>Rectora</strong><br>Dra.Anubis Valencia Mosquera</p>
-            </div>
-            <div class="autoridad">
-                <img src="../IMAGENES/Coordi.jpeg"  alt="Coordinadora">
-                <p><strong>Coordinadora</strong><br>Lic.Sandra Lorena Sinisterra</p>
-            </div>
+
+<section>
+    <h2>Autoridades</h2>
+    <div class="autoridades">
+        <div class="autoridad">
+            <img src="../IMAGENES/Directora.jpeg" alt="Directora">
+            <p><strong>Rectora</strong><br>Dra.Anubis Valencia Mosquera</p>
         </div>
-    </section>
-
-    <section>
-        <h2>Nuestro Liceo</h2>
-        <div class="galeria">
-            <img src="../IMAGENES/CFT1.jpeg" alt="Foto 1" onclick="abrirLightbox('img1')">
-            <img src="../IMAGENES/CFT2.jpeg" onclick="abrirLightbox('img2')">
-            <img src="../IMAGENES/CFT3.jpeg" alt="Foto 3" onclick="abrirLightbox('img3')">
+        <div class="autoridad">
+            <img src="../IMAGENES/Coordi.jpeg" alt="Coordinadora">
+            <p><strong>Coordinadora</strong><br>Lic.Sandra Lorena Sinisterra</p>
         </div>
-    </section>
-    
-    <section>
-        <div class="lightbox" id="img1">
-            <span class="cerrar" onclick="cerrarLightbox('img1')">&times;</span>
-            <img src="../IMAGENES/CFT1.jpeg" alt="Foto 1">
-        </div>   
+    </div>
+</section>
 
-        <div class="lightbox" id="img2">
-            <span class="cerrar" onclick="cerrarLightbox('img2')">&times;</span>
-            <img src="../IMAGENES/CFT2.jpeg" alt="Foto 2">
+
+<section class="carrusel">
+    <div class="slides">
+        <div class="slide active">
+            <img src="../IMAGENES/CFT1.jpeg" alt="Foto 1" onclick="abrirLightbox('c1')">
         </div>
-
-        <div class="lightbox" id="img3">
-            <span class="cerrar" onclick="cerrarLightbox('img3')">&times;</span>
-            <img src="../IMAGENES/CFT3.jpeg" alt="Foto 3">
+        <div class="slide">
+            <img src="../IMAGENES/CFT2.jpeg" alt="Foto 2" onclick="abrirLightbox('c2')">
         </div>
-    </section>
-
-    <section>
-        <h2>Agendar Cita</h2>
-        <button onclick="window.location.href='https://tu-formulario.com'">Agendar Ahora</button>
-    </section>
-
-    <!-- Botones flotantes -->
-    <div class="boton-flotante">
-        <a href="https://wa.me/573027165324" target="_blank">📱</a>
-        <a href="">✉️</a>
+        <div class="slide">
+            <img src="../IMAGENES/CFT3.jpeg" alt="Foto 3" onclick="abrirLightbox('c3')">
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Colegio liceo santa clara | Todos los derechos reservados</p>
-        <p> Página hecha con orgullo colombiano</p>
-    </footer>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</section>
+
+
+<div class="lightbox" id="c1">
+    <span class="cerrar" onclick="cerrarLightbox('c1')">&times;</span>
+    <img src="../IMAGENES/CFT1.jpeg" alt="Foto 1">
+</div>
+<div class="lightbox" id="c2">
+    <span class="cerrar" onclick="cerrarLightbox('c2')">&times;</span>
+    <img src="../IMAGENES/CFT2.jpeg" alt="Foto 2">
+</div>
+<div class="lightbox" id="c3">
+    <span class="cerrar" onclick="cerrarLightbox('c3')">&times;</span>
+    <img src="../IMAGENES/CFT3.jpeg" alt="Foto 3">
+</div>
+
+<section>
+    <h2>Agendar Cita</h2>
+    <button onclick="window.location.href='https://tu-formulario.com'">Agendar Ahora</button>
+</section>
+
+<div class="boton-flotante">
+    <a href="https://wa.me/573027165324" target="_blank">📱</a>
+    <a href="">✉️</a>
+</div>
+
+<footer>
+    <p>&copy; 2025 Colegio liceo santa clara | Todos los derechos reservados</p>
+    <p>Página hecha con orgullo colombiano</p>
+</footer>
+
+<script>
+   
+    const slides = document.querySelectorAll('.slide');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    let index = 0;
+
+    function showSlide(i) {
+        if(i < 0) index = slides.length - 1;
+        else if(i >= slides.length) index = 0;
+        else index = i;
+
+        document.querySelector('.slides').style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prev.addEventListener('click', () => showSlide(index - 1));
+    next.addEventListener('click', () => showSlide(index + 1));
+
+    // ====== LIGHTBOX JS ======
+    function abrirLightbox(id) {
+        document.getElementById(id).classList.add('activo');
+    }
+    function cerrarLightbox(id) {
+        document.getElementById(id).classList.remove('activo');
+    }
+</script>
 
 </body>
-
-<script src="../JAVASCRIPT/scriptMain.js"></script>
-
 </html>
