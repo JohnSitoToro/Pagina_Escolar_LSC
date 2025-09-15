@@ -92,60 +92,52 @@
     margin-bottom: 10px;
 }
 
-/* Contenedor general */
 .contenedor-hoja {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px 0;
 }
 
-/* Carrusel */
+
 .carrusel {
+    display: flex;
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 1000px;
-    /* límite de ancho */
     margin: auto;
     overflow: hidden;
-    /* oculta lo que se desborda */
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Contenedor de slides (se mueve con translateX) */
+
 .carrusel .slides {
     display: flex;
-    /* pone todas las slides en fila */
     transition: transform 0.6s ease-in-out;
-    /* animación suave */
     width: 100%;
-    /* el JS recalcula este valor */
 }
 
-/* Cada slide */
+
 .carrusel .slide {
     flex: 0 0 100%;
-    /* cada slide ocupa 100% del carrusel */
     text-align: center;
 }
 
-/* Imagen del slide */
+
 .carrusel .slide img {
     width: 100%;
     height: 500px;
-    /* ajusta según tu diseño */
     object-fit: cover;
-    /* mantiene proporción recortando */
     border-radius: 12px;
     transition: transform 0.3s ease-in-out;
 }
 
 .carrusel .slide img:hover {
     transform: scale(1.03);
-    /* efecto zoom suave */
+    
 }
 
-/* Botones de navegación */
+
 .carrusel .prev,
 .carrusel .next {
     position: absolute;
@@ -175,12 +167,11 @@
     right: 15px;
 }
 
-/* Lightbox */
+
 .lightbox {
     display: none;
-    /* oculto por defecto */
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
@@ -192,8 +183,8 @@
 
 .lightbox img {
     max-width: 90%;
-    max-height: 80%;
-    border-radius: 12px;
+    max-height: 90%;
+    border-radius: 10px;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
@@ -201,7 +192,6 @@
     display: flex;
 }
 
-/* Botón cerrar */
 .lightbox .cerrar {
     position: absolute;
     top: 20px;
@@ -216,11 +206,10 @@
     color: red;
 }
 
-/* Contenedor del mapa */
+
 .map-container {
     width: 100%;
     max-width: 1000px;
-    /* o el ancho que quieras */
     margin: 0 auto;
     margin-top: 20px;
     overflow: hidden;
@@ -228,14 +217,12 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* El iframe del mapa */
 .map-container iframe {
     width: 100%;
     height: 400px;
-    /* ajusta según tu diseño */
     border: 0;
     border-radius: 10px;
-    /* opcional, para que siga el borde redondeado */
+    
 }
 
 .boton-flotante {
