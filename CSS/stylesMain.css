@@ -1,28 +1,58 @@
-body {
+
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+main {
+  flex: 1;             
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;        
+  padding: 20px;
+  background: #fff;      
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+
+body {
     font-family: Arial, sans-serif;
     background: #f4f4f9;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+
 .banner {
-    display: auto;
+    display: block;
     width: 100vw;
     max-width: 100%;
     height: auto;
     object-fit: cover;
     margin: 0 calc(50% - 50vw);
     padding: 0;
-}
-
-.banner-img {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 15px;
-    margin-trim: both;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 header {
@@ -36,20 +66,13 @@ header img {
     margin-bottom: 15px;
 }
 
-.navegacion {
-    background: #51dee3;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 0;
-}
-
 section {
     padding: 20px;
     margin: 20px auto;
     max-width: 1200px;
-    background: white;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 h2 {
@@ -57,6 +80,7 @@ h2 {
     text-align: center;
     margin-bottom: 20px;
 }
+
 
 .seccion-textos {
     display: flex;
@@ -67,48 +91,22 @@ h2 {
     max-width: 1200px;
 }
 
-.seccion-textos .uniformes {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.seccion-textos .uniformes div {
-    text-align: center;
-}
-
-.seccion-textos .uniformes img {
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-    margin: 5px;
-}
-
-
 .lema-box {
     border: 2px solid black;
     padding: 20px;
     background: #fff;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 50%;
 }
 
-.autoridades-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.autoridades {
+.autoridades-section, .autoridades {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+    gap: 20px;
     flex-wrap: wrap;
-    margin-top: 10px;
 }
 
 .autoridad {
@@ -123,14 +121,10 @@ h2 {
     margin-bottom: 10px;
 }
 
-.agendar-cita {
-    text-align: center;
-}
 
-.agendar-cita button {
-    margin-top: 20px;
-}
-
+/* ==========================
+   Botones
+========================== */
 button {
     background: #0033cc;
     color: white;
@@ -146,6 +140,7 @@ button:hover {
     background: #001a66;
 }
 
+/* Botón flotante */
 .boton-flotante {
     position: fixed;
     bottom: 20px;
@@ -163,7 +158,7 @@ button:hover {
     border-radius: 50%;
     font-size: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     transition: transform 0.3s;
 }
 
@@ -172,13 +167,9 @@ button:hover {
 }
 
 
-footer {
-    background: #222;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
+/* ==========================
+   Lightbox
+========================== */
 .lightbox {
     display: none;
     position: fixed;
@@ -187,7 +178,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0,0,0,0.8);
     justify-content: center;
     align-items: center;
 }
@@ -213,15 +204,37 @@ footer {
     cursor: pointer;
 }
 
-/* Carrusel de fotos */
-.carrusel {
-    position: relative;
-    max-width: 600px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* ==========================
+   Carrusel fotos
+========================== */
+.carousel {
+  width: 100%;
+  max-width: 100%;
 }
+
+.carousel img {
+  width: 100%;
+  height: 400px;      /* altura fija para uniformidad */
+  object-fit: cover;  /* recorta sin deformar */
+  border-radius: 10px;
+}
+
+.contenedor-hoja {
+  max-width: 1100px;   
+  margin: 0 auto;      
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.contenedor-hoja .carousel {
+  width: 100%;
+  border-radius: 10px; 
+  overflow: hidden;    
+}
+
+
 
 .slides {
     display: flex;
@@ -244,7 +257,7 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     color: white;
     border: none;
     font-size: 30px;
@@ -254,20 +267,17 @@ footer {
     z-index: 10;
 }
 
-.carrusel .prev {
-    left: 10px;
-}
-
-.carrusel .next {
-    right: 10px;
-}
+.carrusel .prev { left: 10px; }
+.carrusel .next { right: 10px; }
 
 .carrusel .prev:hover,
 .carrusel .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0,0,0,0.8);
 }
 
-/* Carrusel de textos Misión/Visión */
+/* ==========================
+   Carrusel textos Misión/Visión
+========================== */
 .carrusel-textos {
     position: relative;
     max-width: 600px;
@@ -284,14 +294,13 @@ footer {
     min-width: 100%;
 }
 
-.mision-box,
-.vision-box {
+.mision-box, .vision-box {
     border: 2px solid black;
     padding: 20px;
     background: #fff;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .carrusel-textos .prev-texto,
@@ -299,7 +308,7 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     color: white;
     border: none;
     font-size: 30px;
@@ -309,64 +318,139 @@ footer {
     z-index: 10;
 }
 
-.carrusel-textos .prev-texto {
-    left: 10px;
-}
-
-.carrusel-textos .next-texto {
-    right: 10px;
-}
+.carrusel-textos .prev-texto { left: 10px; }
+.carrusel-textos .next-texto { right: 10px; }
 
 .carrusel-textos .prev-texto:hover,
 .carrusel-textos .next-texto:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0,0,0,0.8);
 }
 
+/* ==========================
+   Uniformes
+========================== */
+/* --- SECCIÓN DE UNIFORMES --- */
 .uniformes {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-.uniformes h2,
+.uniformes h2 {
+    text-align: center;
+    color: #006400;
+    margin-bottom: 30px;
+}
+
+/* Contenedores de hombre/mujer */
+.uniformes-hombre, 
+.uniformes-mujer {
+    margin-bottom: 40px;
+}
+
 .uniformes h3 {
     text-align: center;
     color: #006400;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.uniformes-hombre,
-.uniformes-mujer {
+
+.uniformes-hombre .galeria, 
+.uniformes-mujer .galeria {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 30px;
 }
 
-.uniformes img {
-    width: 200px;
+.uniformes .galeria img {
+    width: 180px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+.uniformes-gala {
+    margin-bottom: 40px;
 }
 
+.uniformes-gala h3 {
+    text-align: center;
+    color: #006400;
+    margin-bottom: 20px;
+}
+
+.uniformes-gala .galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* ==========================
+   Mapa
+========================== */
+.map-container {
+    width: 100%;
+    max-width: 6000px; /* o el ancho que quieras */
+    margin: 0 auto; 
+    overflow: hidden;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
 
 .mapa {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+    flex: 1; /* ocupa un lado */
 }
 
-.mapa h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #006400;
-}
-
-.mapa iframe {
+.map-container iframe {
     width: 100%;
-    height: 450px;
+    height: 400px; /* ajusta según tu diseño */
     border: 0;
+}
+
+
+.info {
+    flex: 1; /* ocupa el otro lado */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #0044cc, #0088ff);
+    padding: 15px 30px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-right: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: white;
+    color: #0044cc;
 }
