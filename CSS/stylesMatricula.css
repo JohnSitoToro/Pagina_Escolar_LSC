@@ -1,0 +1,125 @@
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 calc(50% - 50vw);
+    margin-inline: auto;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #316feb, #0088ff);
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-top: 1px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: white;
+    color: #0044cc;
+}
+.matricula {
+  text-align: center;
+  margin: 50px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.matricula h2 {
+  font-size: 28px;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.matricula button {
+  background: linear-gradient(135deg, #1565c0, #42a5f5);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.matricula button:hover {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.informacion-atencion {
+  text-align: center;
+  margin: 40px auto;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.informacion-atencion h2 {
+  font-size: 28px;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.horarios-card {
+  background: #ffffff;
+  border: 2px solid #0d47a1;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.horarios-card:hover {
+  transform: scale(1.03);
+}
+
+.horarios-card h3 {
+  font-size: 22px;
+  color: #1565c0;
+  margin-bottom: 15px;
+}
+
+.horarios-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horarios-card li {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+  padding: 10px;
+  background: #f0f4ff;
+  border-radius: 8px;
+}
+

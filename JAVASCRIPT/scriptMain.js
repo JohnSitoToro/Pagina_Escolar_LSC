@@ -1,33 +1,39 @@
-// Carrusel fotos
-const slides = document.querySelectorAll('.carrusel .slide');
-const prev = document.querySelector('.carrusel .prev');
-const next = document.querySelector('.carrusel .next');
-let index = 0;
+(function () {
+  const slidesContainer = document.querySelector('.carrusel .slides');
+  const slides = document.querySelectorAll('.carrusel .slide');
+  const prevBtn = document.querySelector('.carrusel .prev');
+  const nextBtn = document.querySelector('.carrusel .next');
+  let index = 0;
 
-function showSlide(i){
-    if(i<0) index=slides.length-1;
-    else if(i>=slides.length) index=0;
-    else index=i;
-    document.querySelector('.carrusel .slides').style.transform = `translateX(-${index*100}%)`;
+  function showSlide(i) {
+    if (slides.length === 0) return;
+    if (i < 0) index = slides.length - 1;
+    else if (i >= slides.length) index = 0;
+    else index = i;
+    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  // Inicialización: ancho total del contenedor
+  if (slides.length > 0) {
+    slidesContainer.style.width = `${slides.length * 100}%`;
+    slides.forEach(slide => (slide.style.width = `${100 / slides.length}%`));
+  }
+
+  // Eventos de botones
+  if (prevBtn) prevBtn.addEventListener('click', () => showSlide(index - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => showSlide(index + 1));
+
+  // Autoplay opcional (descomenta si lo quieres)
+  // setInterval(() => showSlide(index + 1), 5000);
+})();
+
+// ================== Lightbox ==================
+function abrirLightbox(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
 }
-prev.addEventListener('click', ()=>showSlide(index-1));
-next.addEventListener('click', ()=>showSlide(index+1));
 
-// Lightbox
-function abrirLightbox(id){ document.getElementById(id).classList.add('activo'); }
-function cerrarLightbox(id){ document.getElementById(id).classList.remove('activo'); }
-
-// Carrusel textos
-const slidesTextos = document.querySelectorAll('.slide-texto');
-const prevTexto = document.querySelector('.prev-texto');
-const nextTexto = document.querySelector('.next-texto');
-let indexTexto = 0;
-
-function showSlideTexto(i){
-    if(i<0) indexTexto=slidesTextos.length-1;
-    else if(i>=slidesTextos.length) indexTexto=0;
-    else indexTexto=i;
-    document.querySelector('.slides-textos').style.transform = `translateX(-${indexTexto*100}%)`;
+function cerrarLightbox(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.remove('active');
 }
-prevTexto.addEventListener('click', ()=>showSlideTexto(indexTexto-1));
-nextTexto.addEventListener('click', ()=>showSlideTexto(indexTexto+1));
