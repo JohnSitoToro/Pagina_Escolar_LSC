@@ -25,14 +25,3 @@
 
   
 })();
-
-
-function abrirLightbox(id) {
-  const el = document.getElementById(id);
-  if (el) el.classList.add('active');
-}
-
-function cerrarLightbox(id) {
-  const el = document.getElementById(id);
-  if (el) el.classList.remove('active');
-}

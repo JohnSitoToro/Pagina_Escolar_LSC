@@ -1,3 +1,79 @@
+/* --- Responsive: Tablets --- */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .uniformes-inner img,
+  .galeria img {
+    width: 200px;
+  }
+}
+
+/* --- Responsive: Celulares --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .matricula h2,
+  .informacion-atencion h2,
+  .uniformes h2 {
+    font-size: 22px;
+  }
+
+  .uniformes-inner {
+    flex-direction: column; /* 🔹 Hombres arriba, Mujeres abajo */
+    align-items: center;
+  }
+
+  .uniformes-inner img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galeria img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .horarios-card {
+    width: 90%;
+  }
+}
+
+/* --- Responsive: Celulares pequeños --- */
+@media (max-width: 480px) {
+  .matricula button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .uniformes-inner img,
+  .galeria img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
 .banner {
     display: block;
     width: 100%;
@@ -166,46 +242,6 @@
 .carrusel .next {
     right: 15px;
 }
-
-
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-}
-
-.lightbox.active {
-    display: flex;
-}
-
-.lightbox .cerrar {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2.5rem;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.lightbox .cerrar:hover {
-    color: red;
-}
-
 
 .map-container {
     width: 100%;
